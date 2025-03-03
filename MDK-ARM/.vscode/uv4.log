@@ -1,0 +1,15 @@
+*** Using Compiler 'V5.06 update 7 (build 960)', folder: 'D:\APP\Keil_STM32\ARM\ARMCC\Bin'
+Build target 'XK01_V1.0'
+compiling Modbus_RTU.c...
+..\BSP\Src\Modbus_RTU.c(129): error:  #137: expression must be a modifiable lvalue
+      slave_pwm.fan_pwm7_level = ((slave_pwm.fan_info>>2) &= 0x07) / 184;
+..\BSP\Src\Modbus_RTU.c: 0 warnings, 1 error
+compiling PWM_CRL.c...
+..\BSP\Src\PWM_CRL.c(56): error:  #137: expression must be a modifiable lvalue
+      slave_pwm.fan_pwm7_level = ((slave_pwm.fan_info>>2) &= 0x07) / 184;
+..\BSP\Src\PWM_CRL.c(58): warning:  #1-D: last line of file ends without a newline
+  }
+..\BSP\Src\PWM_CRL.c: 1 warning, 1 error
+"..\Output\XK01_V1.0" - 2 Error(s), 1 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:01
