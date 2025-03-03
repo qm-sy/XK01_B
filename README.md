@@ -1,0 +1,2 @@
+# XK01_B
+For SP-MPS350P
