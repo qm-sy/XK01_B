@@ -872,7 +872,7 @@ void LCD_Init(void)
 
     LCD_Address_Set(0, 0, LCD_Width - 1, LCD_Height - 1);
 
-    LCD_Clear(WHITE);
+    LCD_Clear(BACK_COLOR);
 
     /* Display on */
 

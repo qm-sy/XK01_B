@@ -106,7 +106,16 @@ void key1_press( void )
     switch (gui_beat.beat_select)
     {
         case MODE:
-            jump_to_init();
+            key.key1_press_cnt = 1;
+            gui_beat.beat_select = key.key1_press_cnt;
+            gui_beat.beat_switch = BEAT_ON;
+
+            key.gui_key2_allow_flag = 1;
+            key.gui_key3_allow_flag = 1;
+
+            modbus.modbus_04_scan_allow = 0;
+
+            key.gui_key4_allow_flag = 1;
             break;
 
         default:

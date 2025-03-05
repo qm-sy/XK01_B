@@ -298,7 +298,7 @@ void get_slave3_current_statu_multifunpower( void )
 
 void write_slave_reg( void )
 {
-    delay_ms(5);
+    delay_ms(50);
     modbus.slave_send_flag = 0;
     switch (key.mode_select)
     {

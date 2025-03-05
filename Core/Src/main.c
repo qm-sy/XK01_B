@@ -136,14 +136,16 @@ int main(void)
 	pwm_crl(50,75,75,200);
 	
 	power_crl(70);
-	LCD_Clear(WHITE);
+	LCD_Clear(BACK_COLOR);
 	//printf("========= code start ========= \r\n");
-	
+	key.mode_select = 0;
 	get_slave_init_statu_multifunpower();
-	write_slave_reg();
-	key_init();
+  delay_ms(180);
+  key_init();
 	gui_init();
 	gui_icon_init();
+	write_slave_reg();
+
 	modbus.modbus_04_scan_flag = 0;
 	modbus.modbus_04_scan_allow = 1;
   modbus.slave_send_flag = 1;
@@ -156,7 +158,8 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		Modbus_Event();
+
+  		Modbus_Event();
 
 		icon_beat(gui_beat.beat_select,gui_beat.beat_switch);
     if(modbus.slave_send_flag == 1)

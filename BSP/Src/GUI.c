@@ -23,7 +23,7 @@ static void power_beat( void )
 {
     if( gui_beat.beat_clear == 1 )
     {
-        LCD_Fill(63,195,99,219,WHITE);
+        LCD_Fill(63,195,99,219,BACK_COLOR);
     }else
     {
         power_dis();
@@ -34,7 +34,7 @@ static void wind_beat( void )
 {
     if( gui_beat.beat_clear == 1 )
     {
-        LCD_Fill(179,195,191,219,WHITE);
+        LCD_Fill(179,195,191,219,BACK_COLOR);
     }else
     {
         wind_dis();
@@ -45,7 +45,7 @@ static void mode_beat( void )
 {
     if( gui_beat.beat_clear == 1 )
     {
-        LCD_Fill(288,195,300,219,WHITE);
+        LCD_Fill(288,195,300,219,BACK_COLOR);
     }else
     {
         mode_dis();
@@ -345,7 +345,7 @@ void sync_switch( void )
         }
     }else
     {
-        LCD_Fill(55,3,85,33,WHITE);
+        LCD_Fill(55,3,85,33,BACK_COLOR);
         write_slave_reg();
     }
 }
